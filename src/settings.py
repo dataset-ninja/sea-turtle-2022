@@ -13,59 +13,103 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "Sea Turtle 2022"
+PROJECT_NAME_FULL: str = "Sea Turtle ID 2022 Dataset"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.Custom(
+    source_url="https://www.kaggle.com/datasets/wildlifedatasets/seaturtleid2022?select=license.txt"
+)
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [
+    Research.Environmental(),
+    Industry.Fishery(),
+]
+CATEGORY: Category = Category.Environmental(extra=[Category.Livestock()])
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [
+    CVTask.InstanceSegmentation(),
+    CVTask.SemanticSegmentation(),
+    CVTask.ObjectDetection(),
+    CVTask.Localization(),
+]
+ANNOTATION_TYPES: List[AnnotationType] = [
+    AnnotationType.InstanceSegmentation(),
+    AnnotationType.ObjectDetection(),
+]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
-    RELEASE_YEAR: int = None
+    RELEASE_YEAR: int = 2022
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://www.kaggle.com/datasets/wildlifedatasets/seaturtleid2022"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 16200774
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/sea-turtle-2022"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = (
+    "https://www.kaggle.com/datasets/wildlifedatasets/seaturtleid2022/download?datasetVersionNumber=3"
+)
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]] | Literal["predefined"]] = "predefined"
+CLASS2COLOR: Optional[Dict[str, List[str]] or Literal["predefined"]] = {
+    "turtle": [230, 25, 75],
+    "flipper": [60, 180, 75],
+    "head": [255, 225, 25],
+}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = (
+    "https://openaccess.thecvf.com/content/WACV2024/html/Adam_SeaTurtleID2022_A_Long-Span_Dataset_for_Reliable_Sea_Turtle_Re-Identification_WACV_2024_paper.html"
+)
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {
-    "GitHub": "some_link_to_repo_if_exists"
-}
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
 CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
-AUTHORS_CONTACTS: Optional[List[str]] = None
+AUTHORS: Optional[List[str]] = [
+    "Lukas Adam",
+    "Vojtech Cermak",
+    "Kostas Papafitsoros",
+    "Lukas Picek",
+]
+AUTHORS_CONTACTS: Optional[List[str]] = [
+    "lukas.adam.cr@gmail.com",
+    "cermavo3@fel.cvut.cz",
+    "k.papafitsoros@qmul.ac.uk",
+    "picekl@kky.zcu.cz",
+    "lpicek@inria.cz",
+]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
+    "Czech Technical University, Czech",
+    "Queen Mary University of London, UK",
+]
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
+    "https://www.cvut.cz/en",
+    "https://www.qmul.ac.uk/",
+]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
+    "closed splits": ["splt closed train", "splt closed val", "splt closed test"],
+    "random closed splits": [
+        "splt closed random train",
+        "splt closed random val",
+        "splt closed random test",
+    ],
+    "__POSTTEXT__": "Additionally, every image marked with its ***identity***, ***date*** tags. Labels marked with its ***orientation*** and ***occluded***. Explore it in Supervisely labelling tool",
+}
 TAGS: Optional[
     List[
         Literal[
