@@ -107,15 +107,15 @@ def convert_and_upload_supervisely_project(
     orientation_meta = sly.TagMeta("orientation", sly.TagValueType.ANY_STRING)
     occluded_meta = sly.TagMeta("occluded", sly.TagValueType.NONE)
 
-    splt_closed_test = sly.TagMeta("splt closed test", sly.TagValueType.NONE)
-    splt_closed_val = sly.TagMeta("splt closed val", sly.TagValueType.NONE)
-    splt_closed_train = sly.TagMeta("splt closed train", sly.TagValueType.NONE)
+    splt_closed_test = sly.TagMeta("split closed test", sly.TagValueType.NONE)
+    splt_closed_val = sly.TagMeta("split closed val", sly.TagValueType.NONE)
+    splt_closed_train = sly.TagMeta("split closed train", sly.TagValueType.NONE)
 
     val_to_meta = {"train": splt_closed_train, "valid": splt_closed_val, "test": splt_closed_test}
 
-    splt_closed_test_random = sly.TagMeta("splt closed random test", sly.TagValueType.NONE)
-    splt_closed_val_random = sly.TagMeta("splt closed random val", sly.TagValueType.NONE)
-    splt_closed_train_random = sly.TagMeta("splt closed random train", sly.TagValueType.NONE)
+    splt_closed_test_random = sly.TagMeta("split closed random test", sly.TagValueType.NONE)
+    splt_closed_val_random = sly.TagMeta("split closed random val", sly.TagValueType.NONE)
+    splt_closed_train_random = sly.TagMeta("split closed random train", sly.TagValueType.NONE)
 
     val_to_meta_random = {
         "train": splt_closed_train_random,

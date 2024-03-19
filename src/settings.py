@@ -102,11 +102,11 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "closed splits": ["splt closed train", "splt closed val", "splt closed test"],
+    "closed splits": ["split closed train", "split closed val", "split closed test"],
     "random closed splits": [
-        "splt closed random train",
-        "splt closed random val",
-        "splt closed random test",
+        "split closed random train",
+        "split closed random val",
+        "split closed random test",
     ],
     "__POSTTEXT__": "Additionally, every image marked with its ***identity***, ***date*** tags. Labels marked with its ***orientation*** and ***occluded***. Explore it in Supervisely labelling tool",
 }
