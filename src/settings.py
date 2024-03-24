@@ -15,25 +15,25 @@ from dataset_tools.templates import (
 ##################################
 PROJECT_NAME: str = "Sea Turtle 2022"
 PROJECT_NAME_FULL: str = "Sea Turtle ID 2022 Dataset"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.Custom(
-    source_url="https://www.kaggle.com/datasets/wildlifedatasets/seaturtleid2022?select=license.txt"
+    source_url="https://www.kaggle.com/datasets/wildlifedatasets/seaturtleid2022?select=license.txt",
+    redistributable=False,
 )
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [
     Research.Environmental(),
-    Industry.Fishery(),
 ]
-CATEGORY: Category = Category.Environmental(extra=[Category.Livestock()])
+CATEGORY: Category = Category.Environmental()
 
 CV_TASKS: List[CVTask] = [
     CVTask.InstanceSegmentation(),
     CVTask.SemanticSegmentation(),
     CVTask.ObjectDetection(),
-    CVTask.Localization(),
+    CVTask.Identification(),
 ]
 ANNOTATION_TYPES: List[AnnotationType] = [
     AnnotationType.InstanceSegmentation(),
@@ -92,7 +92,7 @@ AUTHORS_CONTACTS: Optional[List[str]] = [
 ]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
-    "Czech Technical University, Czech",
+    "Czech Technical University",
     "Queen Mary University of London, UK",
 ]
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = [

@@ -37,15 +37,13 @@ All underwater photographs were captured during snorkeling surveys, taken from v
 
 1) From 2010 to 2013, a Canon IXUS 105 digital compact camera was utilized, housed within a Canon underwater housing.
 2) In the years 2014 to 2017, a Canon 6D full-frame DSLR camera was employed, paired with a Sigma 15mm fisheye lens and encased in an Ikelite underwater housing.
-3) From 2018 to 2022, the same Canon 6D camera setup was used, with the addition of an INON Z330 external flash.
-The resolutions of the photographs varied, ranging from 4000×3000 pixels for the Canon IXUS camera to 5472×3648 pixels for the Canon 6D, with an average resolution of 5269×3564 pixels. The water depth during photography sessions fluctuated between 1 to 8 meters, with the majority of photographs taken at depths less than 5 meters.
+3) From 2018 to 2022, the same Canon 6D camera setup was used, with the addition of an INON Z330 external flash. The resolutions of the photographs varied, ranging from 4000×3000 pixels for the Canon IXUS camera to 5472×3648 pixels for the Canon 6D, with an average resolution of 5269×3564 pixels. The water depth during photography sessions fluctuated between 1 to 8 meters, with the majority of photographs taken at depths less than 5 meters.
 
 Images captured from 2014 to 2022 generally exhibit higher quality due to the utilization of a more advanced camera setup and shorter camera-to-subject distances. However, the use of fisheye lenses may introduce barrel-shaped distortion, particularly noticeable in close-up shots. Additionally, the incorporation of an external flash resulted in more natural color reproduction in the images.
 
 <img src="https://github.com/dataset-ninja/sea-turtle-2022/assets/120389559/101f3c5d-4a95-4fe9-9120-57dfe74c0190" alt="image" width="800">
 
-<span style="font-size: smaller; font-style: italic;">Selected individual turtle (t023) from the SeaTurtleID2022 database, photographed with three different camera set-ups. Photographs taken with the DSLR camera are of higher quality, and the additional use of flash recovers the natural colouration of the animal.
-All the photographs were cropped for illustration purposes.</span>
+<span style="font-size: smaller; font-style: italic;">Selected individual turtle (t023) from the SeaTurtleID2022 database, photographed with three different mcamera set-ups. Photographs taken with the DSLR camera are of higher quality, and the additional use of flash recovers the natural colouration of the animal. All the photographs were cropped for illustration purposes.</span>
 
 Containing 8729 photographs capturing 438 individual sea turtles, this dataset stands as the most comprehensive publicly available resource for sea turtle identification in their natural habitat. These images are presented in their original resolution and showcase a variety of backgrounds. Around 90% of the photographs boast dimensions of 5472×3648 pixels, with an average size of 5269×3564 pixels. On average, the dimensions dedicated to the turtle's head occupy approximately 635×554 pixels within each image.
 
